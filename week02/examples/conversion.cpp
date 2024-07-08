@@ -13,5 +13,15 @@ int main()
 
     cout << "num_short = " << num_short << endl;
 
+    // data loss
+    int num_int1 = 0x7ABCDEF0;
+    float num_int_float = num_int1;
+    int num_int2 = (int)(num_int_float);
+    cout << num_int1 << endl;
+    cout << num_int_float << endl;
+    cout << num_int_float - num_int1 << endl;
+    cout << num_int2 << endl;
+    cout << num_int_float - num_int2 << endl;
+
     return 0;
 }
